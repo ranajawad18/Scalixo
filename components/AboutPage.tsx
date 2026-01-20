@@ -35,10 +35,6 @@ const TeamCard: React.FC<{
         src={image} 
         alt={name} 
         className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" 
-        onError={(e) => {
-          // Fallback if local image doesn't exist yet
-          (e.target as HTMLImageElement).src = `https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=400&h=500&fit=crop&q=80&sig=${Math.random()}`;
-        }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-100 transition-opacity"></div>
       
