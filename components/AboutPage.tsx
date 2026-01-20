@@ -35,6 +35,10 @@ const TeamCard: React.FC<{
         src={image} 
         alt={name} 
         className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" 
+        onError={(e) => {
+          // Fallback if local image doesn't exist yet
+          (e.target as HTMLImageElement).src = `${image}${Math.random()}`;
+        }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-100 transition-opacity"></div>
       
@@ -91,30 +95,30 @@ const AboutPage: React.FC<AboutPageProps> = ({ isDarkMode }) => {
 
   // Expanded Team Array - 24 Members
   const team = [
-    { name: "Professor Rai Shahzad Hussain", role: "CEO & Lead Architect", image: "assets/ceo.jpg" },
-     { name: "PMS", role: "Ceo Graphics", image: "assets/Graphics Ceo.png" },
-      { name: "Haris Sab", role: "Digital Marketing", image: "assets/digital ceo.jpeg" },
-       { name: "Muzamil Sab", role: "Wordpress Ceo", image: "assets/wordpress.jpeg" },
-     { name: "Jawad Qadeer", role: "Senior Developer", image: "assets/ceo.png" },
-    { name: "Junaid Ehtihsam", role: "Web Developer", image: "assets/web4.jpeg" },
-    { name: "Fiaz Hussain", role: "web Developer", image: "assets/web3.jpeg" },
-    { name: "Zohaib", role: "Web Developer", image: "assets/web1.jpeg" },
-    { name: "Khalil Ahmed", role: "Web Developer", image: "assets/web2.jpeg" },
-    { name: "Rehman Qureshi", role: "Web Developer", image: "assets/web5.jpeg" },
-    { name: "Manan Ahmed", role: "web Developer", image: "assets/Manan.jpeg" },
-    { name: "Sheraz Ali", role: "Web Developer", image: "assets/web.jpeg" },
-    { name: "Faizan", role: "Visuals Graphics", image: "assets/graphic2.jpeg" },
-    { name: "Azhar ", role: "Senior Graphics Designer", image: "assets/designer.jpeg" },
-    { name: "Shahbram", role: "Deigner", image: "assets/graphic.jpg" },
-    { name: "Haseeb Umar", role: "Deigner", image: "assets/graphic1.jpeg" },
-    { name: "Waqas", role: "Lead Designer", image: "assets/waqas.png" },
-    { name: "Fakhar Ali", role: "Graphics Designer", image: "assets/graphic4.jpeg" },
-    { name: "Asad Ali", role: "Designer", image: "assets/graphic5.jpg" },
-    { name: "Asad", role: "Wordpress", image: "assets/wordpress1.jpeg" },
-    { name: "Mubashar", role: "Wordpress", image: "assets/word.jpeg" },
-    { name: "Talha Bukhari", role: "Digital Marketing", image: "assets/digital.jpg" },
-    { name: "Haseeb Hassan", role: "Digital Marketing", image: "assets/digital1.jpeg" },
-    { name: "Mubashar", role: "Graphic", image: "assets/Mubasher.jpeg" },
+    { name: "Professor Rai Shahzad Hussain", role: "CEO & Lead Architect", image: "/assets/ceo.jpg" },
+     { name: "PMS", role: "Ceo Graphics", image: "/assets/Graphics Ceo.png" },
+      { name: "Haris Sab", role: "Digital Marketing", image: "/assets/digital ceo.jpeg" },
+       { name: "Muzamil Sab", role: "Wordpress Ceo", image: "/assets/wordpress.jpeg" },
+     { name: "Jawad Qadeer", role: "Senior Developer", image: "/assets/ceo.png" },
+    { name: "Junaid Ehtihsam", role: "Web Developer", image: "/assets/web4.jpeg" },
+    { name: "Fiaz Hussain", role: "web Developer", image: "/assets/web3.jpeg" },
+    { name: "Zohaib", role: "Web Developer", image: "/assets/web1.jpeg" },
+    { name: "Khalil Ahmed", role: "Web Developer", image: "/assets/web2.jpeg" },
+    { name: "Rehman Qureshi", role: "Web Developer", image: "/assets/web5.jpeg" },
+    { name: "Manan Ahmed", role: "web Developer", image: "/assets/Manan.jpeg" },
+    { name: "Sheraz Ali", role: "Web Developer", image: "/assets/web.jpeg" },
+    { name: "Faizan", role: "Visuals Graphics", image: "/assets/graphic2.jpeg" },
+    { name: "Azhar ", role: "Senior Graphics Designer", image: "/assets/designer.jpeg" },
+    { name: "Shahbram", role: "Deigner", image: "/assets/graphic.jpg" },
+    { name: "Haseeb Umar", role: "Deigner", image: "/assets/graphic1.jpeg" },
+    { name: "Waqas", role: "Lead Designer", image: "/assets/waqas.png" },
+    { name: "Fakhar Ali", role: "Graphics Designer", image: "/assets/graphic4.jpeg" },
+    { name: "Asad Ali", role: "Designer", image: "/assets/graphic5.jpg" },
+    { name: "Asad", role: "Wordpress", image: "/assets/wordpress1.jpeg" },
+    { name: "Mubashar", role: "Wordpress", image: "/assets/word.jpeg" },
+    { name: "Talha Bukhari", role: "Digital Marketing", image: "/assets/digital.jpg" },
+    { name: "Haseeb Hassan", role: "Digital Marketing", image: "/assets/digital1.jpeg" },
+    { name: "Mubashar", role: "Graphic", image: "/assets/Mubasher.jpeg" },
 
   ];
 
