@@ -1,0 +1,8 @@
+
+{
+  "name": "Scalixo | Digital Architecture",
+  "description": "Premium digital agency scaling brands through engineering and strategic design.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
